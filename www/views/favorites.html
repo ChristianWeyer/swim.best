@@ -1,0 +1,16 @@
+<section id="favorites" data-transition="slide">
+    <header data-title="Favoriten">
+        <nav class="left">
+            <a lab-aside="menu" data-icon="menu" data-label="swim.best"></a>
+        </nav>
+    </header>
+    <article class="active list scroll">
+        <ul>
+            <li ng-repeat="favorite in results" ng-click="getRecords(favorite)" class="selectable arrow" ng-swipe-left="swipe(favorite)">
+                <button class="button small cancel right" ng-show="showDelete(favorite)" ng-click="deleteFavorite(favorite)">Löschen</button>
+                <span><strong>{{favorite.Firstname + " " + favorite.Lastname + " (" + favorite.BornYear + ")"}}</strong></span>
+                <div><small>{{favorite.Club}}</small></div>
+            </li>
+        </ul>
+    </article>
+</section>

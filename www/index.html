@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="SwimBestApp">
+    <head>
+        <title>swim.best</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" type="text/css" href="content/lungo.css"/>
+        <link rel="stylesheet" type="text/css" href="content/lungo.icon.css"/>
+        <link rel="stylesheet" type="text/css" href="content/lungo.icon.brand.css"/>
+        <link rel="stylesheet" type="text/css" href="content/theme.lungo.css">
+    </head>
+
+    <body lab-boot>
+        <section id="main" data-transition="slide" ng-controller="SearchController">
+            <header data-title="Bestzeiten">
+                <nav class="left">
+                    <a lab-aside="menu" data-icon="menu" data-label="swim.best"></a>
+                </nav>
+            </header>
+            
+            <article class="active indented" id="main-search">
+                <form>
+                    <br/><br/>
+                    <fieldset>
+                        <label><strong>Name:</strong></label>
+                        <input type="text" ng-model="searchName" size="30">
+                    </fieldset>
+                    <br/>
+                    &nbsp;<button ng-click="search()" class="anchor margin bottom">Suchen</button>
+                </form>
+            </article>
+        </section>
+
+        <aside id="menu">
+            <article class="active list">
+                <ul>
+                    <li>
+                        <a href="search" data-router="article" data-icon="search">
+                            <strong>&nbsp;Suche</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="favorites" data-icon="star">
+                            <strong>&nbsp;Favoriten</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings"  data-icon="settings">
+                            <strong>&nbsp;Einstellungen</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about"  data-icon="info">
+                            <strong>&nbsp;&Uuml;ber</strong>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </aside>
+        
+        <div id="spinner"></div>
+        
+        <lab-view>
+        </lab-view>
+        
+        <script src="js/lib/quo.debug.js"></script>
+        <script src="js/lib/lungo.debug.js"></script>
+        <script src="js/lib/jquery-1.10.1.min.js"></script>
+        <script src="js/lib/cordova.js"></script>
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-cookies.min.js"></script>
+        <script src="js/lib/angular-mobile.min.js"></script>
+        <script src="js/lib/lungo-angular-bridge.js"></script>
+        <script src="js/lib/lawnchair-0.6.1.min.js"></script>
+        <script src="js/lib/underscore-min.js"></script>
+        <script src="js/lib/MobileServices.Web-1.0.0.min.js"></script>
+        <script src="js/lib/spin.js"></script>
+
+        <script src="js/constants.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services/favoritesService.js"></script>
+        <script src="js/services/swimRecordsService.js"></script>
+        <script src="js/controllers/searchController.js"></script>
+        <script src="js/controllers/resultsController.js"></script>
+        <script src="js/controllers/recordsController.js"></script>
+        <script src="js/controllers/favoritesController.js"></script>
+        <script src="js/controllers/settingsController.js"></script>
+
+        <script type="text/javascript">
+            mobileApp.initialize();
+        </script>
+    </body>
+</html>

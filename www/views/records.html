@@ -1,0 +1,37 @@
+<section id="records" data-transition="slide">
+    <header data-title="{{swimmerName}}">
+        <nav class="left">
+            <a lab-aside="menu" data-icon="menu"></a>
+        </nav>
+        <nav class="right"><a ng-click="addFavorite()" data-icon="star-full"></a></nav>
+    </header>
+    <article id="main-article" class="active list indented scroll">
+        <ul ng-if="swimmerName">
+            <div ng-repeat="event in events">
+                <div ng-if="needDisplayBanner($index)">
+                    <br>
+                    <span>{{currentBanner}}</span>
+                    <br>
+                </div>
+                <li><strong>
+                    <span>{{event}}</span>
+                    <div class="right">{{currentRecords[$index]}}</div></strong>
+                </li>
+            </div>
+        </ul>
+    </article>
+
+    <footer>
+        <nav>
+            <a ng-click="show25()" ng-class="{'active': activeRecords==='25'}">
+                <br />
+                25</a>
+            <a ng-click="show50()" ng-class="{'active': activeRecords==='50'}">
+                <br />
+                50</a>
+            <a ng-click="showCombined()" ng-class="{'active': activeRecords==='Gesamt'}">
+                <br />
+                Gesamt</a>
+        </nav>
+    </footer>
+</section>

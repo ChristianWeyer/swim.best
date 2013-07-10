@@ -1,0 +1,15 @@
+<section id="results" data-transition="slide">
+    <header data-title="Ergebnisse">
+        <nav class="left">
+            <a lab-aside="menu" data-icon="menu" data-label="swim.best"></a>
+        </nav>
+    </header>
+    <article class="active list scroll" id="results-list">
+        <ul>
+            <li ng-repeat="result in results" ng-click="getRecords(result)" class="selectable arrow">
+                <span>{{result.Firstname + " " + result.Lastname + " (" + result.BornYear + ")"}}</span>
+                <div>{{result.Club}}</div>
+            </li>
+        </ul>
+    </article>
+</section>
