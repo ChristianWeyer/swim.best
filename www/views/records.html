@@ -3,7 +3,9 @@
         <nav class="left">
             <a lab-aside="menu" data-icon="menu"></a>
         </nav>
-        <nav class="right"><a ng-click="addFavorite()" data-icon="star-full"></a></nav>
+        <nav class="right">
+            <span data-image="icons/dsv_small_transparent.png" ng-click="addFavorite()"></span>
+        </nav>
     </header>
     <article id="main-article" class="active list indented scroll">
         <ul ng-if="swimmerName">

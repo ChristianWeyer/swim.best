@@ -72,8 +72,8 @@ swimBestApp.factory("loadingIndicatorInterceptor", function ($q) {
 
 var theSpinner = new Spinner({
     lines: 12,
-    length: 10,
-    width: 2,
+    length: 20,
+    width: 1,
     radius: 10,
     color: '#000',
     speed: 1,

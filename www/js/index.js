@@ -13,7 +13,7 @@ var mobileApp = {
     },
     
     onDeviceReady: function() {
-        alert("onDeviceReady");
+        //alert("onDeviceReady");
         angular.element(document).ready(function() {
             angular.bootstrap(document);
         });

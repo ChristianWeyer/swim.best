@@ -1,21 +1,28 @@
 swimBestApp.factory("FavoritesService", ["$rootScope", function ($rootScope) {
     var wamsClient = {};
     wamsClient.serviceProxy = new WindowsAzure.MobileServiceClient("https://swimbest.azure-mobile.net/");
-    wamsClient.favoritesTable = {};
-    wamsClient.isLoggedIn = false;
+    wamsClient.favoritesTable = null;
 
+    var loggedIn = false;
     var localStore = new Lawnchair({ adapter: "dom", name: "swim.best.favorites" }, function () {});
+    var tokenStore = new Lawnchair({ adapter: "dom", name: "swim.best.token" }, function () {});
+
+    wamsClient.isLoggedIn = function () {
+        wamsClient.checkUser();
+        return loggedIn;
+    };
 
     wamsClient.login = function (webIdentityProvider, callback) {
-        if (!wamsClient.isLoggedIn) {
+        if (!loggedIn) {
             wamsClient.serviceProxy.login(webIdentityProvider).then(function (user) {
-                wamsClient.isLoggedIn = user != null;
+                loggedIn = user !== null;
 
-                if(wamsClient.isLoggedIn) {
+                if (loggedIn) {
+                    tokenStore.save({key: "wamsUser", value: user});
                     wamsClient.favoritesTable = wamsClient.serviceProxy.getTable("favorites");
                 }
 
-                callback(wamsClient.isLoggedIn);
+                callback(loggedIn);
             }, function (error) {
                 alert("WAMS: " + error); //TODO: change this to a LungoJS Notification (or an event)
             });
@@ -24,25 +31,50 @@ swimBestApp.factory("FavoritesService", ["$rootScope", function ($rootScope) {
 
     wamsClient.logout = function () {
         wamsClient.serviceProxy.logout();
-        wamsClient.favoritesTable = {};
+        wamsClient.favoritesTable = null;
+        loggedIn = false;
+        tokenStore.remove("wamsUser");
         window.cordova.exec(null, null, "InAppBrowser", "clearCookies", []);
-        wamsClient.isLoggedIn = false;
+    };
+
+    wamsClient.checkUser = function () {
+        if (!wamsClient.serviceProxy.currentUser) {
+            loggedIn = false;
+
+            tokenStore.get("wamsUser", function (data) {
+                    if (data) {
+                        wamsClient.serviceProxy.currentUser = data.value;
+
+                        if (wamsClient.serviceProxy.currentUser) {
+                            loggedIn = true;
+                            wamsClient.favoritesTable = wamsClient.serviceProxy.getTable("favorites");
+                        }
+                    }
+                }
+            );
+        }
     };
 
     wamsClient.addFavorite = function (item) {
-        localStore.save({key: item.SwimmerID, value: item});
+        var newItem = angular.copy(item);
+        localStore.save({key: newItem.SwimmerID, value: newItem});
 
-        if (wamsClient.isLoggedIn) {
-            var newItem = angular.copy(item);
+        wamsClient.checkUser();
+        if (loggedIn) {
             wamsClient.favoritesTable.insert(newItem);
         }
     };
 
     wamsClient.getFavorites = function (callback) {
-        if (wamsClient.isLoggedIn) {
+        wamsClient.checkUser();
+        if (loggedIn) {
             wamsClient.favoritesTable.read().then(function (items) {
                 localStore.all(function (localData) {
-                    var mergedUniqueFavorites = _.uniq(_.union(items, _.pluck(localData, 'value')), false, function(item, key){ return item.SwimmerID; });
+                    var mergedUniqueFavorites = _.sortBy(_.uniq(_.union(items, _.pluck(localData, 'value')), false, function (item, key) {
+                        return item.SwimmerID;
+                    }), function(item){
+                        return item.Lastname
+                    });
 
                     //NOTE: currently we do not sync back local favorites to the cloud...!
                     $rootScope.$apply(callback(mergedUniqueFavorites));
@@ -59,7 +91,8 @@ swimBestApp.factory("FavoritesService", ["$rootScope", function ($rootScope) {
     wamsClient.removeFavorite = function (item) {
         localStore.remove(item.SwimmerID, "");
 
-        if (wamsClient.isLoggedIn) {
+        wamsClient.checkUser();
+        if (loggedIn) {
             wamsClient.favoritesTable.del({
                 id: item.id
             });

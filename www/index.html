@@ -14,17 +14,18 @@
     <body lab-boot>
         <section id="main" data-transition="slide" ng-controller="SearchController">
             <header data-title="Bestzeiten">
-                <nav class="left">
-                    <a lab-aside="menu" data-icon="menu" data-label="swim.best"></a>
+                <nav>
+                    <a class="left" lab-aside="menu" data-icon="menu"></a>
+                    <span class="right" data-image="icons/dsv_small_transparent.png" />
                 </nav>
             </header>
             
             <article class="active indented" id="main-search">
-                <form>
+                <form name="searchForm" novalidate>
                     <br/><br/>
                     <fieldset>
                         <label><strong>Name:</strong></label>
-                        <input type="text" ng-model="searchName" size="30">
+                        <input type="text" ng-model="searchName" name="name" size="30" placeholder="Schwimmername">
                     </fieldset>
                     <br/>
                     &nbsp;<button ng-click="search()" class="anchor margin bottom">Suchen</button>
@@ -33,6 +34,9 @@
         </section>
 
         <aside id="menu">
+            <header data-title="swim.best">
+            </header>
+
             <article class="active list">
                 <ul>
                     <li>
@@ -60,7 +64,7 @@
         </aside>
         
         <div id="spinner"></div>
-        
+
         <lab-view>
         </lab-view>
         

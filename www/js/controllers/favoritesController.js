@@ -6,7 +6,7 @@ swimBestApp.controller("FavoritesController", function ($scope, $location, SwimR
     });
 
     $scope.getRecords = function (item) {
-        SwimRecordsService.current.Swimmer = item.Swimmer;
+        SwimRecordsService.current.Swimmer = item;
         $location.path("/records");
     };
 

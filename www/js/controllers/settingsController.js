@@ -1,8 +1,12 @@
 swimBestApp.controller("SettingsController", function ($scope, $location, FavoritesService) {
-    $scope.loginStatus = sb.messages.loggedOutMessage;
+    if(FavoritesService.isLoggedIn()) {
+        $scope.loginStatus = sb.messages.loggedInMessage;
+    } else {
+        $scope.loginStatus = sb.messages.loggedOutMessage;
+    }
 
     $scope.signIn = function () {
-        if(!FavoritesService.isLoggedIn) {
+        if(!FavoritesService.isLoggedIn()) {
             FavoritesService.login("Google", function(isLoggedIn) {
                 if (isLoggedIn)
                 {

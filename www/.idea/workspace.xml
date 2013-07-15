@@ -6,19 +6,20 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/about.html" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373020770485" ignored="false" />
     <file path="/settings.html" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373181638446" ignored="false" />
-    <file path="/favorites.html" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373017883754" ignored="false" />
+    <file path="/favorites.html" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373565098816" ignored="false" />
     <file path="/searchResults.html" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373010908591" ignored="false" />
-    <file path="/index.html" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373361906985" ignored="false" />
+    <file path="/index.html" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373610258334" ignored="false" />
     <file path="/searchController.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373012031157" ignored="false" />
     <file path="/favoritesController.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373131132537" ignored="false" />
     <file path="/services.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373035107646" ignored="false" />
-    <file path="/settingsController.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373183440589" ignored="false" />
-    <file path="/favoritesService.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373363149074" ignored="false" />
+    <file path="/settingsController.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373544828491" ignored="false" />
+    <file path="/favoritesService.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373564996100" ignored="false" />
     <file path="/swimRecordsService.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373058321321" ignored="false" />
-    <file path="/recordsController.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373131263934" ignored="false" />
-    <file path="/constants.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373183298347" ignored="false" />
+    <file path="/recordsController.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373529125022" ignored="false" />
+    <file path="/constants.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373482689900" ignored="false" />
     <file path="/app.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373379806990" ignored="false" />
     <file path="/connectivityService.js" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373379466625" ignored="false" />
+    <file path="/records.html" changelist="2e125057-75d5-47ed-8ecb-592de7e7a2fb" time="1373532120145" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,46 +39,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="47" selection-start="3098" selection-end="3098" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="favoritesService.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/services/favoritesService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="22" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.9062003">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="25" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constants.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/constants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="8" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="favorites.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/favorites.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="38" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
+            <state line="11" column="33" selection-start="642" selection-end="642" vertical-scroll-proportion="-6.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="64" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.2771739">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recordsController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/recordsController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="35" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favoritesService.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/services/favoritesService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="20" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,34 +78,25 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="8" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
+            <state line="15" column="10" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swimRecordsService.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/services/swimRecordsService.js">
+      <file leaf-file-name="resultsController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/resultsController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="55" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0">
+            <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchResults.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/searchResults.html">
+      <file leaf-file-name="searchController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/searchController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="favoritesController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/favoritesController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+            <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,7 +105,25 @@
       <file leaf-file-name="settingsController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/controllers/settingsController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="8" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="records.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/records.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="62" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favoritesController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/favoritesController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="868" selection-end="868" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,29 +139,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/about.html" />
-        <option value="$PROJECT_DIR$/js/services/services.js" />
-        <option value="$PROJECT_DIR$/js/constants.js" />
-        <option value="$PROJECT_DIR$/js/controllers/searchController.js" />
         <option value="$PROJECT_DIR$/js/controllers/resultsController.js" />
-        <option value="$PROJECT_DIR$/js/controllers/recordsController.js" />
-        <option value="$PROJECT_DIR$/js/controllers/favoritesController.js" />
-        <option value="$PROJECT_DIR$/js/controllers/settingsController.js" />
-        <option value="$PROJECT_DIR$/views/settings.html" />
-        <option value="$PROJECT_DIR$/views/favorites.html" />
-        <option value="$PROJECT_DIR$/js/index.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/services/connectivityService.js" />
-        <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/js/services/favoritesService.js" />
         <option value="$PROJECT_DIR$/js/services/swimRecordsService.js" />
+        <option value="$PROJECT_DIR$/js/constants.js" />
+        <option value="$PROJECT_DIR$/js/controllers/favoritesController.js" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/views/settings.html" />
+        <option value="$PROJECT_DIR$/views/searchResults.html" />
+        <option value="$PROJECT_DIR$/views/about.html" />
+        <option value="$PROJECT_DIR$/js/controllers/recordsController.js" />
+        <option value="$PROJECT_DIR$/views/records.html" />
+        <option value="$PROJECT_DIR$/js/controllers/settingsController.js" />
+        <option value="$PROJECT_DIR$/js/services/favoritesService.js" />
+        <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/views/favorites.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="798" />
+    <option name="width" value="1920" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -188,6 +189,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -272,7 +274,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,6 +293,13 @@
       <option name="filePath" />
       <option name="scope" value="ALL" />
       <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -323,13 +331,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="798" extended-state="0" />
+    <frame x="0" y="22" width="1920" height="1090" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17572336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13125989" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -376,7 +384,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -405,104 +413,104 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/controllers/favoritesController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/lungo.icon.brand.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/searchController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/resultsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/recordsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/searchResults.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/favorites.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/favoritesController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="47" selection-start="3098" selection-end="3098" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/services/swimRecordsService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="55" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="25" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="18" column="55" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="14" selection-start="2597" selection-end="2597" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="61" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/searchResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="61" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="61" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
+    <entry file="file://$PROJECT_DIR$/js/controllers/resultsController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="8" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
+        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/searchController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/recordsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="35" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/records.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="62" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/favoritesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="868" selection-end="868" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/settingsController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="8" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+        <state line="6" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/services/favoritesService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="22" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.9062003">
+        <state line="76" column="20" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="10" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/favorites.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="642" selection-end="642" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="64" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.2771739">
           <folding />
         </state>
       </provider>
