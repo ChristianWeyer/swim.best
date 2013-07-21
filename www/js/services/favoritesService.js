@@ -1,11 +1,11 @@
-swimBestApp.factory("FavoritesService", ["$rootScope", function ($rootScope) {
+swimBestApp.factory("FavoritesService", ["$rootScope", "$localStorage", function ($rootScope, $localStorage) {
     var wamsClient = {};
     wamsClient.serviceProxy = new WindowsAzure.MobileServiceClient("https://swimbest.azure-mobile.net/");
     wamsClient.favoritesTable = null;
 
     var loggedIn = false;
-    var localStore = new Lawnchair({ adapter: "dom", name: "swim.best.favorites" }, function () {});
-    var tokenStore = new Lawnchair({ adapter: "dom", name: "swim.best.token" }, function () {});
+    var localFavorites = $localStorage.favorites || [];
+    var localTokens = $localStorage.tokens || {};
 
     wamsClient.isLoggedIn = function () {
         wamsClient.checkUser();
@@ -18,7 +18,7 @@ swimBestApp.factory("FavoritesService", ["$rootScope", function ($rootScope) {
                 loggedIn = user !== null;
 
                 if (loggedIn) {
-                    tokenStore.save({key: "wamsUser", value: user});
+                    localTokens.wamsUser = user;
                     wamsClient.favoritesTable = wamsClient.serviceProxy.getTable("favorites");
                 }
 
@@ -33,33 +33,28 @@ swimBestApp.factory("FavoritesService", ["$rootScope", function ($rootScope) {
         wamsClient.serviceProxy.logout();
         wamsClient.favoritesTable = null;
         loggedIn = false;
-        tokenStore.remove("wamsUser");
+        delete localTokens.wamsUser;
         window.cordova.exec(null, null, "InAppBrowser", "clearCookies", []);
     };
 
     wamsClient.checkUser = function () {
         if (!wamsClient.serviceProxy.currentUser) {
             loggedIn = false;
+            var user = localTokens.wamsUser;
 
-            tokenStore.get("wamsUser", function (data) {
-                    if (data) {
-                        wamsClient.serviceProxy.currentUser = data.value;
-
-                        if (wamsClient.serviceProxy.currentUser) {
-                            loggedIn = true;
-                            wamsClient.favoritesTable = wamsClient.serviceProxy.getTable("favorites");
-                        }
-                    }
-                }
-            );
+            if (user) {
+                wamsClient.serviceProxy.currentUser = user;
+                loggedIn = true;
+                wamsClient.favoritesTable = wamsClient.serviceProxy.getTable("favorites");
+            }
         }
     };
 
     wamsClient.addFavorite = function (item) {
         var newItem = angular.copy(item);
-        localStore.save({key: newItem.SwimmerID, value: newItem});
-
+        localFavorites.push(newItem);
         wamsClient.checkUser();
+
         if (loggedIn) {
             wamsClient.favoritesTable.insert(newItem);
         }
@@ -67,31 +62,29 @@ swimBestApp.factory("FavoritesService", ["$rootScope", function ($rootScope) {
 
     wamsClient.getFavorites = function (callback) {
         wamsClient.checkUser();
+
         if (loggedIn) {
             wamsClient.favoritesTable.read().then(function (items) {
-                localStore.all(function (localData) {
-                    var mergedUniqueFavorites = _.sortBy(_.uniq(_.union(items, _.pluck(localData, 'value')), false, function (item, key) {
-                        return item.SwimmerID;
-                    }), function(item){
-                        return item.Lastname
-                    });
-
-                    //NOTE: currently we do not sync back local favorites to the cloud...!
-                    $rootScope.$apply(callback(mergedUniqueFavorites));
+                var mergedUniqueFavorites = _.sortBy(_.uniq(_.union(items, localFavorites), false, function (item, key) {
+                    return item.SwimmerID;
+                }), function (item) {
+                    return item.Lastname
                 });
+
+                // TODO: delete local favs and store mergedUniqueFavorites
+
+                //NOTE: currently we do not sync back local favorites to the cloud...!
+                $rootScope.$apply(callback(mergedUniqueFavorites));
             });
         } else {
-            localStore.all(function (localData) {
-                var data = _.pluck(localData, 'value');
-                callback(data);
-            });
+            callback(localFavorites);
         }
     };
 
     wamsClient.removeFavorite = function (item) {
-        localStore.remove(item.SwimmerID, "");
-
+        localFavorites = _(localFavorites).reject(function(el) { return el.SwimmerID === item.SwimmerID; });
         wamsClient.checkUser();
+
         if (loggedIn) {
             wamsClient.favoritesTable.del({
                 id: item.id

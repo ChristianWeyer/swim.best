@@ -1,4 +1,4 @@
-var swimBestApp = angular.module('SwimBestApp', ['ngCookies', 'ngMobile', 'Centralway.lungo-angular-bridge']);
+var swimBestApp = angular.module("SwimBestApp", ["ngMobile", "ngStorage", "Centralway.lungo-angular-bridge"]);
 
 swimBestApp.config(["$routeProvider", "$locationProvider", "$httpProvider", function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
