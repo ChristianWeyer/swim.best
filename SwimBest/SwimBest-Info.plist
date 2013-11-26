@@ -16,6 +16,8 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
+				<string>dsv_120</string>
+				<string>dsv_114</string>
 				<string>dsv_57.png</string>
 				<string>dsv_114.png</string>
 				<string>icon-72.png</string>

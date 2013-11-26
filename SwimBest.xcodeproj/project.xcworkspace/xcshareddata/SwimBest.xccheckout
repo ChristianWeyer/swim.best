@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>41786516-4F21-4FBF-8E25-E4EA1BB80EA2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SwimBest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6E7DCAA8-4276-4397-B71B-986B7111867D</key>
+		<string>https://github.com/ChristianWeyer/swim.best.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwimBest.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6E7DCAA8-4276-4397-B71B-986B7111867D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ChristianWeyer/swim.best.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6E7DCAA8-4276-4397-B71B-986B7111867D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6E7DCAA8-4276-4397-B71B-986B7111867D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>swim</string>
+		</dict>
+	</array>
+</dict>
+</plist>
